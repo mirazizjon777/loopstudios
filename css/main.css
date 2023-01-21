@@ -1,0 +1,319 @@
+/* STYLE FONTS */
+/* alata-regular - latin */
+@font-face {
+  font-family: "Alata";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/alata-v9-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/alata-v9-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* josefin-sans-300 - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""),
+    url("../fonts/josefin-sans-v25-latin-300.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/josefin-sans-v25-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* CUSTOM PROOPERTY */
+
+:root {
+  /* BG COLOR */
+  --body-bg-color: #f2f2f2;
+  --white-bg-color: #fff;
+  --black-bg-color: #000000;
+
+  /* TEXT COLOR */
+  --white-text-color: #ffffff;
+  --black-text-color: #000000;
+
+  /* FONTS */
+  --text-font: "Alata", "Arial", sans-serif;
+  --title-font: "Josefin Sans", "Arial", sans-serif;
+}
+
+/* CUSTOM PROOPERTY end. */
+
+/* GLOBAL STYLES */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--body-bg-color);
+  font-family: var(--text-font);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.title {
+  font-family: var(--title-font);
+  font-weight: 300;
+  font-size: 4.8rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.h3-text {
+  font-family: var(--title-font);
+  font-weight: 300;
+  font-size: 3.2rem;
+  line-height: 1;
+}
+/* HEADER */
+.header {
+  width: 100%;
+  height: 100vh;
+  padding: 6.4rem 16rem 14.6rem 16rem;
+  background-image: url(../image/jpg/Bitmap.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white-text-color);
+}
+/* nav */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13rem;
+}
+.nav-img {
+  width: 192px;
+  height: 32px;
+  object-fit: contain;
+  object-position: center;
+}
+.header__title {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.header__item {
+  display: flex;
+  position: relative;
+}
+.header__item::after {
+  width: 0;
+  height: 2px;
+  content: "";
+  color: var(--white-bg-color);
+  position: absolute;
+  bottom: -8px;
+  right: 50%;
+}
+
+.header__item::before {
+  width: 0;
+  height: 2px;
+  content: "";
+  color: var(--white-bg-color);
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+}
+
+.header__item:hover::after,
+.header__item:hover::before {
+  width: 25%;
+}
+/* hero */
+.hero {
+  width: 100%;
+  max-width: 650px;
+  border: 2px solid var(--white-bg-color);
+  padding: 4rem;
+}
+
+.header-hero__bigtext {
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-weight: 300;
+  font-size: 7.2rem;
+  line-height: 7rem;
+}
+/* HEADER END */
+
+/* MAIN */
+main {
+  flex-grow: 1;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+/* main top */
+.main-top {
+  margin-top: 16rem;
+  margin-bottom: 18.4rem;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.main-top img {
+  object-fit: contain;
+  object-position: center;
+}
+.main-top__box {
+  max-width: 541px;
+  background-color: var(--white-bg-color);
+  padding: 9.6rem 0 0 9.6rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.main-top img {
+  width: 731px;
+  height: auto;
+}
+.main-top__text {
+  opacity: 0.5;
+}
+/* .main-top__box:hover{
+  background-color: var(--black-bg-color);
+} */
+.main-top__h2 {
+  margin-bottom: 2.5rem;
+}
+/* main bottom */
+.main-bottom {
+  width: 100%;
+  margin-bottom: 18.4rem;
+}
+.main-bottom__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+}
+.main-bottom__btn {
+  padding: 1.3rem 4rem;
+  border: 1px solid var(--black-bg-color);
+  font-size: 1.4rem;
+  line-height: 1;
+  letter-spacing: 0.35rem;
+}
+.main-bottom__albom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+.main-bottom-image {
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+.main-bottom-h3 {
+  color: var(--white-text-color);
+  position: absolute;
+  left: 4rem;
+  bottom: 6.2rem;
+}
+/* MAIN END */
+
+/* FOOTER */
+.footer {
+  background-color: var(--black-bg-color);
+  color: var(--white-text-color);
+  padding: 4.4rem 0;
+}
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+.footer__icons {
+  display: flex;
+  gap: 1.6rem;
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__p {
+  opacity: 0.5;
+}
+.main-bottom-img {
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 375px) {
+  /* HEADER */
+  .header {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2.4rem 0 2.4rem;
+  }
+  .header__title {
+    display: none;
+  }
+  .hero {
+    min-width: 327px;
+  }
+  .header-hero__bigtext {
+    font-weight: 300;
+    font-size: 4rem;
+    line-height: 3.8rem;
+  }
+  /* MAIN */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    max-width: 375px;
+  }
+  .main-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+  }
+  .main-top__box {
+    position: static;
+    padding: 1.6rem 4.8rem;
+    text-align: center;
+  }
+  .title {
+    font-size: 3.2rem;
+  }
+  .main-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-bottom__btn{
+    display: none;
+  }
+  }
+  .main-bottom__albom{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 12rem;
+  }
+  .main-bottom-img {
+    background-size: cover;
+  }
