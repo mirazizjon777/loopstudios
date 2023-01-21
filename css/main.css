@@ -305,15 +305,11 @@ main {
     flex-direction: column;
     align-items: center;
   }
-  .main-bottom__btn{
+  .main-bottom__btn {
     display: none;
   }
-  }
   .main-bottom__albom{
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 12rem;
+    
   }
-  .main-bottom-img {
-    background-size: cover;
-  }
+}
