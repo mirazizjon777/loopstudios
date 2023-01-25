@@ -88,12 +88,6 @@ h1 {
   background-repeat: no-repeat;
   color: var(--white-text-color);
 }
-.dark-mode{
-  background-color: var(--black-bg-color);
-  background-image: none;
-
-}
-
 /* nav */
 .nav {
   display: flex;
@@ -169,6 +163,7 @@ main {
 .main {
   display: flex;
   flex-direction: column;
+  margin-bottom: 18.4rem;
 }
 /* main top */
 .main-top {
@@ -323,6 +318,11 @@ main {
   .header__title {
     display: none;
   }
+  .dark-mode{
+    background-color: var(--black-bg-color);
+    background-image: none;
+  
+  }
   .burger-btn {
     display: block;
   }
@@ -365,7 +365,7 @@ main {
     display: flex;
     margin-bottom: 2.4rem;
 }
-
+}
 /* 576px */
 @media (max-width: 576px) {
   /* HEADER */
